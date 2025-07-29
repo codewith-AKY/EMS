@@ -1,0 +1,294 @@
+.login-box {
+    width: 350px;
+    margin: 80px auto;
+    padding: 30px 30px 20px 30px;
+    background: #e0f7fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 25px;
+    color: #00796b;
+    font-size: 2em;
+}
+
+.login-box input[type="text"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 14px auto 14px auto;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 6px;
+    font-size: 1.15em;
+    outline: none;
+    transition: border 0.2s;
+    box-sizing: border-box;
+    height: 52px;
+    display: block;
+}
+
+.password-wrapper {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 14px auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.password-wrapper input[type="password"] {
+    width: 100%;
+    padding: 12px 48px 12px 14px;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 6px;
+    font-size: 1.15em;
+    outline: none;
+    transition: border 0.2s;
+    box-sizing: border-box;
+    height: 52px;
+    display: block;
+}
+.toggle-password {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+    background: transparent;
+    padding: 0;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+
+.login-box button[type="submit"] {
+    width: 95%;
+    padding: 12px;
+    background: #00796b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.login-box button[type="submit"]:hover {
+    background: #004d40;
+}
+
+.login-box a {
+    color: #00796b;
+    text-decoration: none;
+    font-size: 0.98em;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background: linear-gradient(120deg, #b2dfdb 0%, #80cbc4 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container-flex {
+    display: flex;
+    min-height: 100vh;
+}
+
+.left-panel {
+    flex: 1;
+    background: linear-gradient(120deg, #00796b 0%, #26a69a 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2.2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.08);
+}
+
+.left-panel.left-panel-margin {
+    margin-left: 40px;
+}
+
+.login-forgot-link {
+    margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+    .container-flex {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .left-panel {
+        min-height: 80px;
+        font-size: 1.2em;
+        padding: 20px 0;
+        box-shadow: none;
+        justify-content: flex-start;
+    }
+    .login-box {
+        margin: 30px auto;
+        width: 95vw;
+        min-width: 0;
+        max-width: 400px;
+        box-sizing: border-box;
+    }
+    .login-box input[type="text"],
+    .password-wrapper input[type="password"] {
+        width: 100%;
+        font-size: 1em;
+        min-width: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .login-box {
+        padding: 15px 5px 10px 5px;
+        width: 98vw;
+        max-width: 99vw;
+    }
+    .left-panel {
+        font-size: 1em;
+        padding: 10px 0;
+    }
+    .login-box h2 {
+        font-size: 1.2em;
+    }
+    .login-box button[type="submit"] {
+        font-size: 1em;
+        padding: 8px;
+    }
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+.dashboard-title {
+    color: #00796b;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.stat-box {
+    flex: 1 1 180px;
+    background: #e0f7fa;
+    border-radius: 8px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.stat-label {
+    color: #00796b;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+.stat-value {
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #004d40;
+}
+.dashboard-link {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: color 0.2s;
+}
+.dashboard-link:hover {
+    color: #004d40;
+    text-decoration: underline;
+}
+@media (max-width: 700px) {
+    .dashboard-container { padding: 10px; }
+    .stats-grid { flex-direction: column; gap: 18px; }
+}
+
+.main-header {
+    background: #00796b;
+    color: #fff;
+    padding: 18px 0 10px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.header-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 18px;
+}
+.header-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.header-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1em;
+    transition: color 0.2s;
+}
+.header-nav a:hover {
+    color: #b2dfdb;
+    text-decoration: underline;
+}
+.main-content {
+    min-height: 70vh;
+    padding: 30px 0 0 0;
+}
+.main-footer {
+    background: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0 10px 0;
+    font-size: 1em;
+    margin-top: 40px;
+}
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+@media (max-width: 700px) {
+    .header-content, .footer-content { padding: 0 6px; }
+    .header-title { font-size: 1.1em; }
+    .header-nav a { font-size: 0.95em; margin: 0 5px; }
+    .main-content { padding: 18px 0 0 0; }
+}
+
+.login-success-msg {
+    color: green;
+    text-align: center;
+    margin-top: 18px;
+    font-size: 1.1em;
+}
+.login-error-msg {
+    color: red;
+    text-align: center;
+    margin-top: 18px;
+    font-size: 1.1em;
+}
