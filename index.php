@@ -26,11 +26,8 @@ if (isset($_SESSION['login_error'])) {
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body style="background: url('uploads/index.jpg') no-repeat center center fixed; background-size: cover;">
 <div class="container-flex">
-    <div class="left-panel left-panel-margin">
-        <h1>Employee Management System</h1>
-    </div>
     <div class="login-box">
         <h2>Admin Login</h2>
         <form action="auth.php" method="POST" id="loginForm" onsubmit="return validateLogin();">
@@ -47,6 +44,9 @@ if (isset($_SESSION['login_error'])) {
                 <a href="forgot_password.php">Forgot Password?</a>
             </div>
         </form>
+    </div>
+    <div class="left-panel left-panel-margin">
+        <!-- Title removed as requested -->
     </div>
 </div>
 <script src="js/main.js"></script>
